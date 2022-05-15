@@ -6,13 +6,47 @@ div.ps_buttons {
     margin-top: 80px;
     margin-left: 300px;
     margin-right: 300px;
+
     gap: 50px;
     object-fit:contain;
     
+}
+
+.main_buttons{
+    border: outset;
+    border-radius: 20px;
+    border-width: 3px;
+    border-color:khaki;
+    transition: border-width 0.7s;
+    transition: border-colo 0.7;
+    transition-timing-function: ease-out;
+}
+
+.main_buttons:hover {
+    border-width: 10px;
+    border-color: orangered;
 }
 
 
 #txt_img {
     width: auto;  
     height: 92px; 
+}
+
+.results_table {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.score_table {
+    display: flex;
+    gap: 100px;
+
+}
+
+.text {
+    font-size: larger;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
 }

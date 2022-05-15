@@ -12,10 +12,17 @@
 <body>
     <div class="main_container">
         <div class="ps_buttons">
-            <button id="rock_button"><img id="txt_img"src="rps_Assets/rock_text.png" alt="rock_text_image"></button>
-            <button id="paper_button"><img id="txt_img"src="rps_Assets/paper_text.png" alt="paper_text_image"></button>
-            <button id="scissors_button"><img id="txt_img"src="rps_Assets/scissors_text.png" alt="scissors_text_image"></button>
+            <button class="main_buttons" id="rock_button"><img id="txt_img"src="rps_Assets/rock_text.png" alt="rock_text_image"></button>
+            <button class="main_buttons" id="paper_button"><img id="txt_img"src="rps_Assets/paper_text.png" alt="paper_text_image"></button>
+            <button class="main_buttons" id="scissors_button"><img id="txt_img"src="rps_Assets/scissors_text.png" alt="scissors_text_image"></button>
 
+        </div>
+        <div class="results_table">
+            <div class="score_table text">
+                <h3>Your score: <span id="player_point">0</span></h3>
+                <h3>Computer score: <span id="computer_point">0</span></h3>
+            </div>
+            <h3 id="round_result" class= "text"></h3>
         </div>
     </div>
     <script src="myscripts.js"></script>

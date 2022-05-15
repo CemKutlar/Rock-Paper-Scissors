@@ -38,6 +38,11 @@ function game(element) {
     if(element.id == "scissors_button") elemName = "scissors";
     playRound(elemName, computerSelection);
 
+    const playerPointHtml = document.getElementById("player_point");
+    playerPointHtml.textContent = playerPoint;
+    const computerPointHtml = document.getElementById("computer_point");
+    computerPointHtml.textContent = computerPoint;
+
     //console.log(answer);
     // let computerSelection = computerPlay();
     // playRound(answer,computerSelection);
@@ -49,14 +54,16 @@ function game(element) {
         playerPoint = computerPoint = 0;
         return;
     }
+    const roundResult = document.getElementById("round_result");
     if(playerPoint == 3) {
-        console.log("YOU WON THE GAME!")
+        roundResult.textContent = "YOU WON THE GAME!";
         playerPoint = computerPoint = 0;
         return;
     }
-    if(playerPoint > tempPlayerPoint) console.log("You won this round!!!");
-    else if(computerPoint > tempCompPoint) console.log("You lost this round!!!");
-    else console.log("DRAW!");
+    
+    if(playerPoint > tempPlayerPoint) roundResult.textContent = "You WON this round!";
+    else if(computerPoint > tempCompPoint) roundResult.textContent = "You LOST this round!";
+    else roundResult.textContent = "DRAW!!!";
     tempPlayerPoint = playerPoint;
     tempCompPoint = computerPoint;
     
