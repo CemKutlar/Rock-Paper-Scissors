@@ -1,6 +1,18 @@
 div.ps_buttons {
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    margin-top: 80px;
+    margin-left: 300px;
+    margin-right: 300px;
+    gap: 50px;
+    object-fit:contain;
+    
+}
+
+
+#txt_img {
+    width: auto;  
+    height: 92px; 
 }

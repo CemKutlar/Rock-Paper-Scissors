@@ -9,6 +9,8 @@ function computerPlay() {
     }
 }
 
+
+
 function playRound(playerSelection, computerSelection) {
     let playerSelectionLowerCase = playerSelection.toLowerCase();
     
@@ -30,7 +32,11 @@ function game(element) {
     //console.log(ps_buttons);
     
     let computerSelection = computerPlay();
-    playRound(element.innerText, computerSelection);
+    let elemName;
+    if(element.id == "rock_button") elemName = "rock";
+    if(element.id == "paper_button") elemName = "paper";
+    if(element.id == "scissors_button") elemName = "scissors";
+    playRound(elemName, computerSelection);
 
     //console.log(answer);
     // let computerSelection = computerPlay();
