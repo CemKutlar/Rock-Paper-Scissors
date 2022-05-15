@@ -52,24 +52,28 @@ function game(element) {
     if(computerPoint == 3) {
         console.log("YOU LOST THE GAME!");
         playerPoint = computerPoint = 0;
+        drawCount = 0;
         return;
     }
     const roundResult = document.getElementById("round_result");
     if(playerPoint == 3) {
         roundResult.textContent = "YOU WON THE GAME!";
         playerPoint = computerPoint = 0;
+        drawCount = 0;
         return;
     }
     
     if(playerPoint > tempPlayerPoint) roundResult.textContent = "You WON this round!";
     else if(computerPoint > tempCompPoint) roundResult.textContent = "You LOST this round!";
-    else roundResult.textContent = "DRAW!!!";
+    else if(drawCount == 0) {roundResult.textContent = "DRAW!!!"; ++drawCount;}
+    else roundResult.textContent = "DRAW!!! " + (++drawCount);
     tempPlayerPoint = playerPoint;
     tempCompPoint = computerPoint;
     
 }
 const ps_buttons = document.querySelector(".ps_buttons");
 let answers = ps_buttons.querySelectorAll("button");
+let drawCount = 0;
 let tempPlayerPoint = 0;
 let tempCompPoint = 0;
 let playerPoint = 0;

@@ -1,3 +1,6 @@
+body {
+    background-color: rgb(110, 121, 19);
+}
 div.ps_buttons {
     display: flex;
     flex: 1;
@@ -38,6 +41,7 @@ div.ps_buttons {
     flex-flow: column;
     align-items: center;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .score_table {
@@ -49,4 +53,10 @@ div.ps_buttons {
 .text {
     font-size: larger;
     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+}
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
 }
